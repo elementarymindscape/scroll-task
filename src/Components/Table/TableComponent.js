@@ -11,7 +11,7 @@ export function TableComponent({ eventData }) {
             <th align="center">No. </th>
             <th align="center">Type</th>
             <th align="center">ID</th>
-            <th align="center">Date-Time</th>
+            <th align="center">Date</th>
             <th align="center">Popularity</th>
             <th align="center">URL</th>
           </tr>
