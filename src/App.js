@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import useScroll from './Custom Hook/useScroll';
 import { TableComponent } from './Components/Table/TableComponent';
 import { Loader } from './Components/Loader/Loader';
+import { IndexedDB } from './Components/Helpers/indexedDB';
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -17,7 +18,6 @@ function App() {
       )
       .then(res => {
         let eventData = res.data;
-        console.log('EVE', eventData);
         pageCount === 1
           ? setEvents([...eventData.events])
           : setEvents([...events, ...eventData.events]);
@@ -39,6 +39,7 @@ function App() {
     <div className="App">
       {!events.length !== 0 && <TableComponent eventData={events} />}
       {isFetching && <Loader />}
+      <IndexedDB eventData={events} />
     </div>
   );
 }

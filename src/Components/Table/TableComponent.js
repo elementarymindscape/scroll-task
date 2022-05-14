@@ -9,6 +9,7 @@ export function TableComponent({ eventData }) {
         <thead>
           <tr>
             <th align="center">No. </th>
+            <th align="center">Title</th>
             <th align="center">Type</th>
             <th align="center">ID</th>
             <th align="center">Date</th>
@@ -21,6 +22,7 @@ export function TableComponent({ eventData }) {
             return (
               <tr key={index}>
                 <td align="center">{index + 1}</td>
+                <td align="center">{eve.title}</td>
                 <td align="center">{eve.type}</td>
                 <td align="center">{eve.id}</td>
                 <td align="center">
