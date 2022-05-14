@@ -1,3 +1,7 @@
+.container {
+  overflow-x: auto;
+}
+
 table,
 th,
 td {

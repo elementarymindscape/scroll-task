@@ -4,7 +4,7 @@ import moment from 'moment';
 
 export function TableComponent({ eventData }) {
   return (
-    <>
+    <div className="container">
       <table>
         <thead>
           <tr>
@@ -33,6 +33,6 @@ export function TableComponent({ eventData }) {
           })}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }
